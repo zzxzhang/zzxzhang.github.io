@@ -1,4 +1,4 @@
 # zzxzhang.github.io
 
 # VPS
-wget https://raw.githubusercontent.com/zzxzhang/vps/master/scripts/setup.sh
+wget http://zzx_zhang.github.io/setup.sh
