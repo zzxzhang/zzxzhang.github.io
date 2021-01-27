@@ -1,8 +1,25 @@
 #!/bin/bash
-touch .alias.sh
 
-echo alias setup="\"yum install -g git;ssh-keygen -f ~/.ssh/id_rsa1 -t rsa -N '';echo \$(cat ~/.ssh/id_rsa1.pub)\"" > .alias.sh
+# 安装Git
+yum install -g git
 
-echo alias ct="\"git clone git@github.com:zzxzhang/vps.git\"" >> .alias.sh
+# 生成ssh key
+ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ''
+echo \$(cat ~/.ssh/id_rsa.pub
+echo "将ssh秘钥添加到github后点击任意键继续"
 
-echo source .alias.sh >> .bashrc
+# 等待点击任意按键继续
+while [ true ] ; do
+read -t 3 -n 1
+if [ $? = 0 ] ; then
+exit ;
+else
+echo "waiting for the keypress"
+fi
+done
+
+# 创建目录clone vps repo
+mkdir /Codes
+cd /Codes
+git clone git@github.com:zzxzhang/vps.git
+
