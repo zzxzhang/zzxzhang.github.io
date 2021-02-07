@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 安装Git
-yum install -g git
+yum install -y git
 
 # 生成ssh key
 ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ''
