@@ -23,9 +23,9 @@ mkdir /Codes
 cd /Codes
 git clone git@github.com:zzxzhang/vps.git
 
-cd /Codes/vps
-chmod +x ./scripts/*.sh
-sh ./scripts/init.sh
+cd /Codes/vps/scripts
+chmod +x ./*.sh
+sh ./init.sh
 
 
 
