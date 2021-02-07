@@ -23,3 +23,8 @@ mkdir /Codes
 cd /Codes
 git clone git@github.com:zzxzhang/vps.git
 
+chmod +x ./scripts/*.sh
+sh ./scripts/init.sh
+
+
+
